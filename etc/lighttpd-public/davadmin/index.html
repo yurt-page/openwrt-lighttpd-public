@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebDAV Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="users.js" defer></script>
+    <script src="folders.js" defer></script>
+</head>
+<body>
+<h1>WebDAV Admin</h1>
+<div id="usersToolbar">
+<button onclick="usersAdd()">👤 Add User</button>
+<button onclick="usersAddApp()">🤖 Add App User and folder</button>
+<button id="usersSaveBtn" onclick="usersSave()" disabled>💾 Save users</button>
+</div>
+<table id="usersTbl">
+</table>
+<hr/>
+
+<div id="authFoldersToolbar">
+    <button onclick="authFoldersAdd()">📁 Add Folder</button>
+    <button id="authFoldersSaveBtn" onclick="authFoldersSave()" disabled>💾 Save folders</button>
+</div>
+
+<table id="authFoldersTbl">
+</table>
+<ul>
+    <li>The admin user has access to all folders.</li>
+    <li>The special valid-user means any user including apps so avoid it.</li>
+    <li>Order of folders is maters and rules applied from first. That's why the root / comes last to allow all folders for admin.</li>
+    <li>The folder may not exist but the rule will be preserved.</li>
+    <li><a href="https://github.com/yurt-page/openwrt-lighttpd-public">Lighttpd webdav</a></li>
+</ul>
+</body>
+</html>

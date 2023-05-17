@@ -1,0 +1,19 @@
+config redirect
+	option dest_port '2080'
+	list proto 'tcp'
+	option src_dport '80'
+	option dest 'lan'
+	option src 'wan'
+	option target 'DNAT'
+	option dest_ip '192.168.1.1'
+	option name 'wan-http-to-local-2080'
+
+config redirect
+	option dest_port '2443'
+	list proto 'tcp'
+	option name 'wan-https-to-local-2443'
+	option src_dport '443'
+	option dest 'lan'
+	option dest_ip '192.168.1.1'
+	option src 'wan'
+	option target 'DNAT'

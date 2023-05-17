@@ -1,0 +1,4 @@
+config mount
+	option enabled '1'
+	option target '/mnt/autoshare'
+	option label 'AUTOSHARE'

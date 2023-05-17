@@ -1,0 +1,17 @@
+
+config acme
+	option state_dir '/etc/acme'
+	option debug '0'
+	option account_email 'YOURMAIL@example.com'
+
+config cert 'example_duckdns_wildcard'
+	option update_nginx '1'
+	option keylength 'ec-256'
+	option validation_method 'dns'
+	option dns 'dns_duckdns'
+	list credentials 'DuckDNS_Token="YOURTOKEN"'
+	option enabled '1'
+	option update_uhttpd '0'
+	option use_staging '0'
+	list domains 'example.duckdns.org'
+	list domains '*.example.duckdns.org'

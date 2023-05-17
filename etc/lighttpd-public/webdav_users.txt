@@ -1,0 +1,7 @@
+admin:pass
+alice:pass
+bob:pass
+media:pass
+kids:pass
+apps:pass
+
